@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+
+    <script src="js/fontsize.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide page1">
+            <p class="tr1 ami" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">个</p>
+
+            <p class="tr2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">人</p>
+
+            <p class="tr3 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.9s">简</p>
+
+            <p class="tr4 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">历</p>
+        </div>
+
+        <div class="swiper-slide page2">
+            <div class="top">
+                <p class="translatte1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  >个</p>
+                <p class="translatte2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">人</p>
+                <p class="translatte3 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.7s">简</p>
+                <p class="translatte4 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.9s">历</p>
+            </div>
+            <h4>牛凯利</h4>
+            <div class="zhong">
+                <ul>
+                    <li class="wz1 ami" ><img src="img/page2.png" alt=""  class="ani"        swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>基本资料</li>
+                    <li class="wz2 ami" ><img src="img/page2.png" alt=""  class="ani"       swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s"/>个人爱好</li>
+                    <li class="wz3 ami" ><img src="img/page2.png" alt=""  class="ani"       swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.9s"/>个人介绍</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <div class="left">
+                    <ul>
+                        <li>姓名</li>
+                        <li>年龄</li>
+                        <li>民族</li>
+                        <li>就读学校</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>牛凯利</li>
+                        <li>19</li>
+                        <li>满</li>
+                        <li>泊头职业学校</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide page3">
+            <h4>我的爱好</h4>
+            <ul class="pic">
+                <li>看电影</li>
+                <li>听音乐</li>
+                <li>玩游戏</li>
+            </ul>
+            <div class="tu">
+                <img class="tu1 ani" src="img/DNF.jpg" alt="" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
+                <img class="tu2 ani" src="img/link.jpg" alt="" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
+            </div>
+        </div>
+
+        <div class="swiper-slide page4">
+            <h4>专 业</h4>
+
+            <div class="pic1">h5</div>
+            <div class="pic2">c3</div>
+            <div class="pic3">js</div>
+            <div class="pian">
+
+                <img src="img/zq.png" alt="" class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
+                <img src="img/xys.png" alt="" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
+            </div>
+        </div>
+
+        <div class="swiper-slide page5">
+            <p>谢谢观看</p>
+
+            <div class="xia ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <p>牛凯利</p>
+                <p>150********</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'vertical',
+
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    })
+</script>
